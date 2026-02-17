@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Login - Acid House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="/images/logoFanso.png">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <p>Este es el contenido del archivo login.html</p>
+
+<div class="auth-container">
+
+    <!-- LEFT SIDE -->
+    <div class="auth-left">
+        <div class="brand">
+            <img src="/images/logoFanso.png" alt="Logo">
+        </div>
+
+        <div class="left-content">
+            <h1>BIENVENIDO A ACID HOUSE</h1>
+            <p>Inicia sesion para tener un viaje acido </p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="auth-right">
+        <div class="form-box">
+            <h2>Login</h2>
+
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="mail@example.com">
+
+                <label>Password</label>
+                <input type="password" placeholder="********">
+
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="switch">
+                Not registered? <a href="/pages/register.html">Create account</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
