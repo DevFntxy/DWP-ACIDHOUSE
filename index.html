@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logoFanso.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 </head>
 <body>
 
@@ -24,8 +23,8 @@
         </nav>
 
         <div class="icons">
-            <span>SHOP🛒</span>
-            <span>LOGIN👤</span>
+            <span class="cart-icon">🛒</span> <!-- NUEVO: icono del carrito -->
+            <span>👤</span>
         </div>
     </header>
 
@@ -38,34 +37,40 @@
             <h3>Música (26)</h3>
 
             <div class="search">
-                <input type="text" placeholder="Buscar...">
+                <input type="text" id="searchInput" placeholder="Buscar..."> <!-- NUEVO: id para búsqueda -->
             </div>
+
+            <!-- NUEVO: botón para agregar producto (admin) -->
+            <button class="btn-agregar" id="btnAgregarProducto">➕ Agregar Producto</button>
         </aside>
 
         <!-- PRODUCT GRID -->
-        <main class="products">
-
-            <div class="card">
-                <img src="assets/img/product1.jpg" alt="Producto">
-                <h4>Lasser – Hockey (Vinilo)</h4>
-                <p class="price">00000</p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/product2.jpg" alt="Producto">
-                <h4>Fanso – Acid House</h4>
-                <p class="price">000000 </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/img/product3.jpg" alt="Producto">
-                <h4>FANSO – Música para Lagartos (Vinilo)</h4>
-                <p class="price">00000</p>
-            </div>
-
+        <main class="products" id="productsGrid">
+            <!-- Las tarjetas se generarán dinámicamente desde JavaScript -->
         </main>
 
     </div>
 
+    <!-- NUEVO: Modal para agregar producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <h3>Nuevo Producto</h3>
+            <input type="text" id="prodNombre" placeholder="Nombre del producto">
+            <input type="text" id="prodPrecio" placeholder="Precio (ej: 25000)">
+            <input type="text" id="prodImagen" placeholder="URL de la imagen">
+            <button id="guardarProducto">Guardar</button>
+            <button class="cancelar" id="cancelarModal">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- NUEVO: Panel del carrito -->
+    <div id="cartPanel" class="cart-panel">
+        <span class="close-cart" id="closeCart">✖</span>
+        <h3>Tu Carrito</h3>
+        <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: $0</div>
+    </div>
+
+    <script src="js/shop.js"></script> <!-- NUEVO: script para funcionalidades de la tienda -->
 </body>
 </html>
