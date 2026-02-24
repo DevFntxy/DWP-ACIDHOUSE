@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificación Humana</title>
+    <link rel="stylesheet" href="/css/verify.css">
+</head>
+<body class="verify-body">
+
+    <div class="validation-container    ">
+        <h2>Verificación de Seguridad</h2>
+        <p>Confirma que eres humano</p>
+
+        <form id="humanForm">
+            <div class="captcha-box">
+                <label>
+                    <input type="checkbox" id="robotCheck">
+                    No soy un robot
+                </label>
+            </div>
+
+            <div class="math-box">
+                <p id="mathQuestion"></p>
+                <input type="number" id="mathAnswer" placeholder="Tu respuesta">
+            </div>
+
+            <button type="submit">Validar</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+<script src="/js/verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+:root {
+    --blue: #6F8FB7;
+    --coral: #E69686;
+    --mint: #A9C8C9;
+    --dark: #222;
+    --error-red: #d32f2f;
+    --success-green: #2e7d32;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mint);
+}
+
+.validation-container {
+    background: white;
+    padding: 40px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validation-container h2 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.checkbox-box {
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.math-box {
+    margin-bottom: 20px;
+}
+
+.math-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.math-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--coral);
+}
