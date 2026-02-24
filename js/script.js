@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showError(input, message) {
         showToast(message, "error");
         input.classList.add("input-error");
-        
+
         // Pequeña animación de escala
         input.style.transform = "scale(1.02)";
         setTimeout(() => {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     emailInput.addEventListener("blur", function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const emailValue = emailInput.value.trim();
-        
+
         if (emailValue === "") {
             showError(emailInput, "📧 El email es obligatorio");
         } else if (!emailRegex.test(emailValue)) {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     phoneInput.addEventListener("input", function () {
         // Eliminar cualquier caracter que no sea número
         this.value = this.value.replace(/[^0-9]/g, '');
-        
+
         // Validar longitud
         if (this.value.length > 0 && this.value.length !== 10) {
             // No mostramos toast en cada input, solo marcamos error visual
@@ -274,17 +274,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (isValid) {
-            showToast("🎉 ¡Registro exitoso! Bienvenido a Acid House", "success");
-            form.reset();
-            
-            // Resetear barra y checklist
-            strengthFill.style.width = "0%";
-            document.getElementById("length").style.color = "#d32f2f";
-            document.getElementById("uppercase").style.color = "#d32f2f";
-            document.getElementById("special").style.color = "#d32f2f";
-            
-            passwordChecklist.style.display = "none";
-            document.querySelector(".strength-bar").style.opacity = "0.3";
+
+            showToast("Validando información...", "success");
+
+            // Guardar datos temporalmente (opcional)
+            const userData = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                phone: phoneInput.value.trim()
+            };
+
+            localStorage.setItem("pendingUser", JSON.stringify(userData));
+
+            // Redirigir después de pequeña animación
+            setTimeout(() => {
+                window.location.href = "validation.html";
+            }, 1500);
         } else {
             // Mostrar un toast resumen si hay varios errores, pero ya cada campo mostró su toast individual
             // Opcional: mostrar un toast general
@@ -299,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.style.transition = "transform 0.3s";
             this.style.transform = "scale(1.02)";
         });
-        
+
         input.addEventListener("blur", function () {
             this.style.transform = "scale(1)";
         });
