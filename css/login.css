@@ -353,3 +353,51 @@ button:hover {
         padding: 14px 20px;
     }
 }
+/* ===== MODO OSCURO ===== */
+body.dark-mode {
+    --blue: #2c3e50;
+    --coral: #c44536;
+    --mint: #577b7c;
+    --dark: #111;
+    background: var(--mint);
+}
+
+body.dark-mode .auth-container {
+    background: #333;
+}
+
+body.dark-mode .auth-left {
+    background: #1a1a1a;
+}
+
+body.dark-mode .form-box h2,
+body.dark-mode .form-box label,
+body.dark-mode .switch {
+    color: #eee;
+}
+
+body.dark-mode input {
+    background: #444;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode input:focus {
+    border-color: var(--blue);
+}
+
+body.dark-mode .options a {
+    color: var(--coral);
+}
+
+body.dark-mode .switch a {
+    color: var(--coral);
+}
+
+body.dark-mode .toggle-password {
+    color: #aaa;
+}
+
+body.dark-mode .toggle-password:hover {
+    color: var(--coral);
+}

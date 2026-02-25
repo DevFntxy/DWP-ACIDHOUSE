@@ -310,3 +310,70 @@ body {
 .close-cart:hover {
     color: #222;
 }
+/* ===== MODO OSCURO ===== */
+body.dark-mode {
+    --blue: #2c3e50;        /* azul más oscuro */
+    --coral: #c44536;        /* coral más oscuro */
+    --mint: #577b7c;         /* menta más oscura */
+    --dark: #111;            /* casi negro */
+    background: var(--mint);
+}
+
+body.dark-mode .header {
+    background: var(--blue);
+}
+
+body.dark-mode .sidebar h3 {
+    color: var(--coral);
+}
+
+body.dark-mode .card {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode .card h4 {
+    color: #eee;
+}
+
+body.dark-mode .search input {
+    background: #444;
+    color: white;
+    border-color: var(--blue);
+}
+
+body.dark-mode .btn-agregar {
+    background: var(--coral);
+}
+
+body.dark-mode .btn-agregar:hover {
+    background: var(--blue);
+}
+
+body.dark-mode .modal-content {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .modal-content input {
+    background: #444;
+    color: white;
+    border-color: var(--blue);
+}
+
+body.dark-mode .cart-panel {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .cart-item {
+    border-bottom-color: #555;
+}
+
+body.dark-mode .close-cart {
+    color: #aaa;
+}
+
+body.dark-mode .close-cart:hover {
+    color: white;
+}

@@ -310,3 +310,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// ===== NUEVO: Toggle de visibilidad de contraseña =====
+document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', () => {
+        const targetId = icon.dataset.target;
+        const input = document.getElementById(targetId);
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.textContent = '👁️‍🗨️';
+        } else {
+            input.type = 'password';
+            icon.textContent = '👁️';
+        }
+    });
+});
+ 
