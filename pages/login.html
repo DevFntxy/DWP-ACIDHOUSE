@@ -10,20 +10,19 @@
 <body>
 
 <div class="auth-container">
-
+    <!-- Botón de tema oscuro propio para login -->
     <div style="position: absolute; top: 20px; right: 20px; z-index: 10;">
         <span id="themeToggle" style="cursor: pointer; font-size: 24px;">🌙</span>
     </div>
-    
+
     <!-- LEFT SIDE -->
     <div class="auth-left">
         <div class="brand">
             <img src="/images/logoFanso.png" alt="Logo">
         </div>
-
         <div class="left-content">
             <h1>BIENVENIDO A ACID HOUSE</h1>
-            <p>Inicia sesion para tener un viaje acido </p>
+            <p>Inicia sesión para tener un viaje ácido</p>
         </div>
     </div>
 
@@ -32,19 +31,18 @@
         <div class="form-box">
             <h2>Iniciar Sesión</h2>
 
-            <form id="loginForm" novalidate> <!-- NUEVO: id y novalidate -->
-                <label>Correo electronico</label>
-                <input type="email" id="loginEmail" placeholder="mail@example.com" autocomplete="off"> <!-- NUEVO: id -->
+            <form id="loginForm" novalidate>
+                <label>Correo electrónico</label>
+                <input type="email" id="loginEmail" placeholder="mail@example.com" autocomplete="off">
 
                 <label>Contraseña</label>
-                <!-- NUEVO: wrapper para toggle -->
                 <div class="password-wrapper">
                     <input type="password" id="loginPassword" placeholder="********">
                     <span class="toggle-password" data-target="loginPassword">👁️</span>
                 </div>
 
                 <div class="options">
-                    <label><input type="checkbox" id="rememberMe"> Recordarme</label> <!-- NUEVO: id -->
+                    <label><input type="checkbox" id="rememberMe"> Recordarme</label>
                     <a href="#">¿Olvidaste tu contraseña?</a>
                 </div>
 
@@ -52,14 +50,13 @@
             </form>
 
             <p class="switch">
-                No tienes cuenta? <a href="/pages/register.html">Crear cuenta</a>
+                ¿No tienes cuenta? <a href="/pages/register.html">Crear cuenta</a>
             </p>
         </div>
     </div>
-
 </div>
 
-<div id="toast"></div> <!-- NUEVO: contenedor para toast -->
-<script src="/js/login.js"></script> <!-- NUEVO: script específico para login -->
+<div id="toast"></div>
+<script src="/js/one.js"></script>
 </body>
 </html>

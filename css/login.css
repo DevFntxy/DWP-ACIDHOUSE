@@ -20,6 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background 0.3s;
 }
 
 .auth-container {
@@ -32,6 +33,7 @@ body {
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     animation: fadeIn 1s ease;
+    position: relative;
 }
 
 .reverse {
@@ -97,7 +99,6 @@ label {
     font-weight: 500;
 }
 
-/* NUEVO: contenedor para input con icono */
 .password-wrapper {
     position: relative;
     display: flex;
@@ -106,7 +107,7 @@ label {
 
 .password-wrapper input {
     flex: 1;
-    padding-right: 40px; /* espacio para el icono */
+    padding-right: 40px;
 }
 
 .toggle-password {
@@ -130,6 +131,7 @@ input {
     border-radius: 8px;
     transition: all 0.3s ease;
     font-size: 14px;
+    width: 100%;
 }
 
 input:focus {
@@ -292,11 +294,6 @@ button:hover {
     to { transform: translateX(-50%); opacity: 1; }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 @keyframes slideLeft {
     from { transform: translateX(-50px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
@@ -319,20 +316,16 @@ button:hover {
         height: auto;
         min-height: 90vh;
     }
-
     .reverse {
         flex-direction: column;
     }
-
     .auth-left {
         height: 250px;
         padding: 20px;
     }
-    
     .auth-right {
         padding: 30px 0;
     }
-    
     .form-box {
         width: 90%;
     }
@@ -342,62 +335,12 @@ button:hover {
     .left-content h1 {
         font-size: 24px;
     }
-    
     .form-box h2 {
         font-size: 24px;
     }
-    
     #toast {
         min-width: 250px;
         font-size: 13px;
         padding: 14px 20px;
     }
-}
-/* ===== MODO OSCURO ===== */
-body.dark-mode {
-    --blue: #2c3e50;
-    --coral: #c44536;
-    --mint: #577b7c;
-    --dark: #111;
-    background: var(--mint);
-}
-
-body.dark-mode .auth-container {
-    background: #333;
-}
-
-body.dark-mode .auth-left {
-    background: #1a1a1a;
-}
-
-body.dark-mode .form-box h2,
-body.dark-mode .form-box label,
-body.dark-mode .switch {
-    color: #eee;
-}
-
-body.dark-mode input {
-    background: #444;
-    color: white;
-    border-color: #555;
-}
-
-body.dark-mode input:focus {
-    border-color: var(--blue);
-}
-
-body.dark-mode .options a {
-    color: var(--coral);
-}
-
-body.dark-mode .switch a {
-    color: var(--coral);
-}
-
-body.dark-mode .toggle-password {
-    color: #aaa;
-}
-
-body.dark-mode .toggle-password:hover {
-    color: var(--coral);
 }

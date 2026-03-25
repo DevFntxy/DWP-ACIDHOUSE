@@ -23,15 +23,12 @@ form.addEventListener("submit", function(e) {
     if (parseInt(mathAnswer.value) === correctAnswer) {
         message.textContent = "Registrado con éxito 🎉";
         message.className = "success";
-
         setTimeout(() => {
-            window.location.href = "login.html"; // o dashboard
+            window.location.href = "login.html";
         }, 2000);
-
     } else {
         message.textContent = "Verificación incorrecta. Redirigiendo...";
         message.className = "error";
-
         setTimeout(() => {
             window.location.href = "register.html";
         }, 2000);
