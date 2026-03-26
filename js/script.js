@@ -310,3 +310,83 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+// ===== NUEVO: Toggle de visibilidad de contraseña =====
+document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', () => {
+        const targetId = icon.dataset.target;
+        const input = document.getElementById(targetId);
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.textContent = '👁️‍🗨️';
+        } else {
+            input.type = 'password';
+            icon.textContent = '👁️';
+        }
+    });
+
+});
+
+// script.js - Validaciones para el formulario de registro (con toggle de contraseña)
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("registerForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+    const strengthFill = document.getElementById("strengthFill");
+    const passwordChecklist = document.getElementById("passwordChecklist");
+
+    // Inicializar ocultos
+    if (passwordChecklist) passwordChecklist.style.display = "none";
+    const strengthBar = document.querySelector(".strength-bar");
+    if (strengthBar) strengthBar.style.opacity = "0.3";
+
+    // Función para mostrar toast
+    function showToast(message, type = "success") {
+        const toast = document.getElementById("toast");
+        if (!toast) return;
+        toast.textContent = message;
+        toast.className = "";
+        toast.classList.add("show", type);
+        setTimeout(() => {
+            toast.classList.remove("show", type);
+        }, 3000);
+    }
+
+    function showError(input, message) {
+        showToast(message, "error");
+        input.classList.add("input-error");
+        input.style.transform = "scale(1.02)";
+        setTimeout(() => {
+            input.style.transform = "scale(1)";
+        }, 200);
+    }
+
+    function clearError(input) {
+        input.classList.remove("input-error");
+    }
+
+    // Validaciones en tiempo real (solo algunas como ejemplo; el resto está en el código original)
+    // ... (aquí iría todo el código de validación que ya tenías, pero lo omito por brevedad, 
+    //      asegúrate de conservar tu lógica original) ...
+
+    // ===== NUEVO: Toggle de visibilidad de contraseña =====
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+        icon.addEventListener('click', () => {
+            const targetId = icon.dataset.target;
+            const input = document.getElementById(targetId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.textContent = '👁️‍🗨️';
+            } else {
+                input.type = 'password';
+                icon.textContent = '👁️';
+            }
+        });
+    });
+});
+
+
+ 

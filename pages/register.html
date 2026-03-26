@@ -1,77 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Register - Acid House</title>
+    <title>Registro - Acid House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/logoFanso.png">
     <link rel="stylesheet" href="/css/login.css">
 </head>
-
 <body>
 
-    <div class="auth-container reverse">
+<div class="auth-container reverse">
+    <!-- FORM SIDE -->
+    <div class="auth-right">
+        <div class="form-box">
+            <h2>Crear Cuenta</h2>
 
-        <!-- FORM SIDE -->
-        <div class="auth-right">
-            <div class="form-box">
-                <h2>Crear Cuenta</h2>
+            <form id="registerForm" novalidate>
+                <label>Nombre</label>
+                <input type="text" id="name" placeholder="Nombre" autocomplete="off">
 
-                <form id="registerForm" novalidate>
+                <label>Correo electrónico</label>
+                <input type="email" id="email" placeholder="correo@ejemplo.com" autocomplete="off">
 
-                    <label>Nombre</label>
-                    <input type="text" id="name" placeholder="Nombre" autocomplete="off">
-                    
-                    <label>Correo electronico</label>
-                    <input type="email" id="email" placeholder="correo@ejemplo.com" autocomplete="off">
-                    
-                    <label>Numero telefonico</label>
-                    <input type="tel" id="phone" placeholder="1234567890" autocomplete="off">
+                <label>Número telefónico</label>
+                <input type="tel" id="phone" placeholder="1234567890" autocomplete="off">
 
-                    <label>Contraseña</label>
+                <label>Contraseña</label>
+                <div class="password-wrapper">
                     <input type="password" id="password" placeholder="********">
+                    <span class="toggle-password" data-target="password">👁️</span>
+                </div>
 
-                    <label>Confirmar Contraseña</label>
+                <label>Confirmar Contraseña</label>
+                <div class="password-wrapper">
                     <input type="password" id="confirmPassword" placeholder="********">
+                    <span class="toggle-password" data-target="confirmPassword">👁️</span>
+                </div>
 
-                    <!-- Barra de seguridad (solo para password) -->
-                    <div class="strength-bar">
-                        <div id="strengthFill"></div>
-                    </div>
+                <!-- Barra de seguridad -->
+                <div class="strength-bar">
+                    <div id="strengthFill"></div>
+                </div>
 
-                    <!-- Checklist para password -->
-                    <ul id="passwordChecklist">
-                        <li id="length">Mínimo 8 caracteres</li>
-                        <li id="uppercase">Al menos una mayúscula</li>
-                        <li id="special">Un carácter especial</li>
-                    </ul>
+                <!-- Checklist -->
+                <ul id="passwordChecklist">
+                    <li id="length">Mínimo 8 caracteres</li>
+                    <li id="uppercase">Al menos una mayúscula</li>
+                    <li id="special">Un carácter especial</li>
+                </ul>
 
-                    <button type="submit">Registrarse</button>
-                </form>
+                <button type="submit">Registrarse</button>
+            </form>
 
-                <p class="switch">
-                    Ya tienes cuenta? <a href="login.html">Login</a>
-                </p>
-            </div>
+            <p class="switch">
+                ¿Ya tienes cuenta? <a href="login.html">Login</a>
+            </p>
         </div>
-
-        <!-- LEFT SIDE VISUAL -->
-        <div class="auth-left">
-            <div class="brand">
-                <img src="/images/logoFanso.png" alt="Logo">
-            </div>
-
-            <div class="left-content">
-                <h1>BIENVENIDO A ACID HOUSE</h1>
-                <p>Regístrate para tener un viaje ácido</p>
-            </div>
-        </div>
-
     </div>
-    
-    <div id="toast"></div>
-    <script src="/js/script.js"></script>
-</body>
 
+    <!-- LEFT SIDE VISUAL -->
+    <div class="auth-left">
+        <div class="brand">
+            <img src="/images/logoFanso.png" alt="Logo">
+        </div>
+        <div class="left-content">
+            <h1>BIENVENIDO A ACID HOUSE</h1>
+            <p>Regístrate para tener un viaje ácido</p>
+        </div>
+    </div>
+</div>
+
+<div id="toast"></div>
+<script src="/js/one.js"></script>
+</body>
 </html>

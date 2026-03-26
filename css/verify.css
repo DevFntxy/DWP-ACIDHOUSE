@@ -81,3 +81,39 @@ button {
 button:hover {
     background-color: var(--coral);
 }
+/* ===== MODO OSCURO ===== */
+body.dark-mode {
+    --blue: #2c3e50;
+    --coral: #c44536;
+    --mint: #577b7c;
+    --dark: #111;
+    background: var(--mint);
+}
+
+body.dark-mode .validation-container {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode .validation-container h2,
+body.dark-mode .validation-container p {
+    color: #eee;
+}
+
+body.dark-mode input {
+    background: #444;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .checkbox-box {
+    background: #444;
+}
+
+body.dark-mode button {
+    background: var(--blue);
+}
+
+body.dark-mode button:hover {
+    background: var(--coral);
+}
